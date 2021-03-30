@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom", "ESNext"],
+    "types": ["node", "jest"],
+    "jsx": "react",
+    "removeComments": true,
+    "noEmit": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./src",
+    "paths": {}
+  },
+  "exclude": ["node_modules", "dist", "config", "public"]
+}

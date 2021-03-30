@@ -1,0 +1,48 @@
+{
+  "name": "suckless-react-observer",
+  "version": "0.1.0",
+  "description": "IntersectionObserver API wrapper for React/Preact that doesn't try to reinvent the wheel",
+  "source": "src/index.tsx",
+  "main": "dist/suckless-react-observer.js",
+  "module": "dist/suckless-react-observer.m.js",
+  "esmodule": "dist/suckless-react-observer.esm.js",
+  "unpkg": "dist/suckless-react-observer.umd.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "lightweight",
+    "component",
+    "hooks",
+    "viewport",
+    "intersection",
+    "observer",
+    "lazy load",
+    "suckless",
+    "useIntersectionObserver"
+  ],
+  "author": "fabricio7p",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.3",
+    "webpack": "^5.27.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
