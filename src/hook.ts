@@ -1,10 +1,10 @@
-type observeFn = (target: HTMLElement) => void;
+type observeFn = (target: HTMLElement) => void
 interface ObserverHook {
   (
     callback: IntersectionObserverCallback,
     options?: IntersectionObserverInit,
     wrapper?: HTMLElement
-  ): { observe: observeFn; unobserve: observeFn };
+  ): { observe: observeFn; unobserve: observeFn }
 }
 
 export const useIntersectionObserver: ObserverHook = (cb, options, wrapper) => {

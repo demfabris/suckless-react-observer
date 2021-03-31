@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-
-import { useIntersectionObserver } from './useIntersectionObserver'
+import { useIntersectionObserver } from './hook'
 
 /**
  * Bare intersection observer wrapper
@@ -13,12 +12,12 @@ import { useIntersectionObserver } from './useIntersectionObserver'
  * @param root: where the children is intersecting into
  */
 interface Props {
-  children: React.ReactNode;
-  onRevealCallback: (props: { visible: boolean; ref: HTMLDivElement }) => void;
-  fallback?: React.ReactNode;
-  intersectionConfig?: IntersectionObserverInit;
-  root?: HTMLElement;
-  [rest: string]: string | unknown;
+  children: React.ReactNode
+  onRevealCallback: (props: { visible: boolean; ref: HTMLDivElement }) => void
+  fallback?: React.ReactNode
+  intersectionConfig?: IntersectionObserverInit
+  root?: HTMLElement
+  [rest: string]: string | unknown
 }
 export const ObservedWrapper = ({
   children,

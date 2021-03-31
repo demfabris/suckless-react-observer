@@ -5,6 +5,7 @@ module.exports = {
     jest: true
   },
   extends: [
+    'react',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
@@ -18,6 +19,6 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: [],
   rules: {}
 }

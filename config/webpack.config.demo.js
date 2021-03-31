@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
 const buildVersion = require('child_process')
@@ -9,14 +10,24 @@ const buildBranch = require('child_process')
   .toString()
 
 module.exports = {
-  mode: 'production',
-  entry: path.resolve(__dirname, './src/index.tsx'),
+  mode: 'development',
+  entry: path.resolve(__dirname, '../src/index.tsx'),
   output: {
     path: path.resolve('dist'),
     filename: 'suckless-react-observer.js'
   },
   resolve: {
     extensions: ['.ts', '.js', '.tsx', '.jsx']
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: [
+      path.join(__dirname, '../demo'),
+      path.join(__dirname, '../dist')
+    ],
+    port: 3000,
+    hot: true,
+    open: true
   },
   module: {
     rules: [
@@ -28,6 +39,13 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: 'suckless intersection observer',
+      scriptLoading: 'defer',
+      inject: true,
+      template: path.resolve(__dirname, '../demo/index.html'),
+      filename: path.resolve(__dirname, '../dist/index.html')
+    }),
     new webpack.DefinePlugin({
       __BUILD_VERSION: JSON.stringify(buildVersion),
       __BUILD_BRANCH: JSON.stringify(buildBranch)
