@@ -48,7 +48,8 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       __BUILD_VERSION: JSON.stringify(buildVersion),
-      __BUILD_BRANCH: JSON.stringify(buildBranch)
+      __BUILD_BRANCH: JSON.stringify(buildBranch),
+      __RUNMODE: 'development'
     })
   ]
 }
